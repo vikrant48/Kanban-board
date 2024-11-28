@@ -201,3 +201,85 @@ body {
   width: 20px;
   height: 20px;
 }
+
+
+/********************  responsive css ***********************/
+@media (max-width: 768px) {
+  .kanban-container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+    padding: 12px;
+  }
+
+  .kanban-column-title {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .kanban-column-title-icons img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .kanban-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .kanban-card-id {
+    font-size: 10px;
+  }
+
+  .kanban-card-title {
+    font-size: 14px;
+  }
+
+  .kanban-card-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kanban-card-user-circle {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .last-line {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .last-line img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ********************Dropdown ************* */
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .dropdown-toggle {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+    font-size: 12px;
+  }
+
+  .dropdown select,
+  .button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
