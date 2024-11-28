@@ -32,14 +32,14 @@ const KanbanBoard = () => {
 
         // Map userId to userName
         const userMap = users.reduce((acc, user) => {
-          acc[user.id] = user.name; 
+          acc[user.id] = user.name;
           return acc;
         }, {});
 
         // Update tickets with user names
         const updatedTickets = tickets.map((ticket) => ({
           ...ticket,
-          username: userMap[ticket.userId] || "Unknown User", 
+          username: userMap[ticket.userId] || "Unknown User",
         }));
 
         setTickets(updatedTickets);
@@ -61,17 +61,17 @@ const KanbanBoard = () => {
           className="dropdown-toggle"
           onClick={() => setDisplayDropdown(!displayDropdown)}
         >
-        <img 
-            src={displayicon} 
-            alt="Display Icon" 
-            className="dropdown-icon" 
-        />
+          <img
+            src={displayicon}
+            alt="Display Icon"
+            className="dropdown-icon"
+          />
           Display
-        <img 
-            src={down} 
-            alt="Icon" 
-            className="dropdown-icon" 
-        />
+          <img
+            src={down}
+            alt="Icon"
+            className="dropdown-icon"
+          />
 
         </button>
         {displayDropdown && (
@@ -108,9 +108,9 @@ const KanbanBoard = () => {
               grouping === "priority"
                 ? priorityLabels[group]
                 : grouping === "status"
-                ? group
-                : group
-            } 
+                  ? group
+                  : group
+            }
             tickets={sortedTickets[group]}
           />
         ))}
@@ -131,7 +131,7 @@ const groupBy = (tickets, key) => {
   if (key === "status") {
     allStatuses.forEach((status) => {
       if (!grouped[status]) {
-        grouped[status] = []; 
+        grouped[status] = [];
       }
     });
   }
