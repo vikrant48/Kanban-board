@@ -14,14 +14,14 @@ import urgentIcon from "../assets/SVG - Urgent Priority colour.svg";
 
 const iconMapping = {
   Todo: todoIcon,
-  "In process": inProcessIcon,
+  "In progress": inProcessIcon,
   Done: doneIcon,
   Cancelled: cancelledIcon,
   Backlog: backlogIcon,
   High: highPriorityIcon,
   Medium: mediumPriorityIcon,
   Low: lowPriorityIcon,
-  "No_Priority": noPriorityIcon,
+  "No Priority": noPriorityIcon,
   Urgent: urgentIcon,
 };
 

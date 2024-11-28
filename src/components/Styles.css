@@ -25,14 +25,19 @@ body {
 
 .kanban-column-title {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  gap: 8px;
   font-size: 16px;
   font-weight: bold;
   color: #333;
   padding: 8px 12px;
   background-color: #fffefe;
   border-bottom: 1px solid #fffefe;
+}
+.kanban-column-icon img {
+  width: 20px;
+  height: 20px;
 }
 
 .kanban-column-title-icons img {
