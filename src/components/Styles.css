@@ -1,0 +1,203 @@
+/* General Layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/****************** card css ************/
+.kanban-container {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  overflow-x: auto;
+  background-color: #f4f6f8;
+}
+
+.kanban-column {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-width: 300px;
+}
+
+.kanban-column-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px;
+  background-color: #fffefe;
+  border-bottom: 1px solid #fffefe;
+}
+
+.kanban-column-title-icons img {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.kanban-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.kanban-card:hover {
+  transform: translateY(-4px);
+}
+
+.kanban-card-id {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.kanban-card-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kanban-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  flex-grow: 1;
+}
+
+.kanban-card-user-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #a3c8ef;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.last-line {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #444;
+}
+
+.last-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 8px; 
+  font-size: 12px;
+  color: #444;
+}
+
+.last-line img {
+  width: 16px;
+  height: 16px;
+  margin: 0; 
+}
+
+
+
+
+/****************************** Display dropdown*************************/
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+.dropdown select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #f2f4f7;
+  color: #171616;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #c8d6e4;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-toggle:hover {
+  background-color: #d7e3f0;
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-menu label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dropdown-menu select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+}
