@@ -10,7 +10,7 @@ const priorityLabels = {
   3: "High",
   2: "Medium",
   1: "Low",
-  0: "No Priority",
+  0: "No_Priority",
 };
 
 const allStatuses = ["Todo", "In progress", "Backlog", "Done", "Cancelled"]; // as given in img 

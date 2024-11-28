@@ -1,12 +1,40 @@
 import React from "react";
 import threedot from "../assets/3 dot menu.svg"
 import plus from "../assets/add.svg"
+import todoIcon from "../assets/To-do.svg";
+import inProcessIcon from "../assets/in-progress.svg";
+import doneIcon from "../assets/Done.svg";
+import cancelledIcon from "../assets/Cancelled.svg";
+import backlogIcon from "../assets/Backlog.svg";
+import highPriorityIcon from "../assets/Img - High Priority.svg";
+import mediumPriorityIcon from "../assets/Img - Medium Priority.svg";
+import lowPriorityIcon from "../assets/Img - Low Priority.svg";
+import noPriorityIcon from "../assets/No-priority.svg";
+import urgentIcon from "../assets/SVG - Urgent Priority colour.svg";
+
+const iconMapping = {
+  Todo: todoIcon,
+  "In process": inProcessIcon,
+  Done: doneIcon,
+  Cancelled: cancelledIcon,
+  Backlog: backlogIcon,
+  High: highPriorityIcon,
+  Medium: mediumPriorityIcon,
+  Low: lowPriorityIcon,
+  "No_Priority": noPriorityIcon,
+  Urgent: urgentIcon,
+};
 
 const KanbanColumn = ({ title, tickets }) => {
+
+  const icon = iconMapping[title] || null;
   return (
     <div className="kanban-column">
       <div className="kanban-column-title">
         {/* adding svg according to title here */}
+        <div className="kanban-column-icon">
+          {icon && <img src={icon} alt={`${title} Icon`} />}
+        </div>
         <span>
           {title}   {tickets.length}
         </span>
