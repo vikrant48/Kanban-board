@@ -58,6 +58,9 @@ const KanbanColumn = ({ title, tickets }) => {
             <div className="kanban-card-user-circle">
               {ticket.username?.charAt(0).toUpperCase() || "U"}
               {/* we can add active part heree */}
+              <div
+                className={`user-status-dot ${ticket.available ? "active" : "inactive"}`}
+              ></div>
             </div>
           </div>
           <div className="last-line">

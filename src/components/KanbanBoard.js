@@ -32,14 +32,15 @@ const KanbanBoard = () => {
 
         // Map userId to userName
         const userMap = users.reduce((acc, user) => {
-          acc[user.id] = user.name;
+          acc[user.id] = { name: user.name, available: user.available };
           return acc;
         }, {});
 
         // Update tickets with user names
         const updatedTickets = tickets.map((ticket) => ({
           ...ticket,
-          username: userMap[ticket.userId] || "Unknown User",
+          username: userMap[ticket.userId]?.name || "Unknown User",
+          available: userMap[ticket.userId]?.available || false,
         }));
 
         setTickets(updatedTickets);

@@ -81,17 +81,37 @@ body {
 }
 
 .kanban-card-user-circle {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #a3c8ef;
-  color: #fff;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a3c8ef;
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
-  margin-left: 8px;
+}
+
+.user-status-dot {
+  width: 9px;                
+  height: 9px;               
+  border-radius: 50%;        
+  position: absolute;       
+  bottom: -2px;              
+  left: 50%;                
+  transform: translateX(60%);
+  border: 2px solid white;
+   
+}
+
+.user-status-dot.active {
+  background-color: green;
+}
+
+.user-status-dot.inactive {
+  background-color: gray;
 }
 
 .last-line {
